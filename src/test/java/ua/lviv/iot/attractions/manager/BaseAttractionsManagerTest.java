@@ -1,16 +1,18 @@
 package ua.lviv.iot.attractions.manager;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
-import ua.lviv.iot.attractions.model.Railway;
+import org.junit.jupiter.api.BeforeEach;
+
+import ua.lviv.iot.attractions.model.Attractions;
 
 public abstract class BaseAttractionsManagerTest {
-
-	protected List<Railway> railways;
+	protected List<Attractions> attractions;
 	
-	public void createRailways() {
-		railways = new LinkedList<Railway>();
-		railways.add(new Railway());
+	@BeforeEach
+	public void createAttractions() {
+		attractions = new ArrayList<Attractions>();
+		attractions.add(new Attractions(0, 0, 0, 0, 0, 0, 0, null));
 	}
 }
